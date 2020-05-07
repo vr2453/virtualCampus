@@ -5,6 +5,7 @@ import CategoriesSection from "../components/home-sections/CategoriesSection";
 import { Helmet } from 'react-helmet'
 import AddIcon from "@material-ui/icons/Add";
 import Button from "../components/material-kit-components/CustomButtons/Button.js";
+import {MuiThemeProvider} from "@material-ui/core/styles";
 
 const TITLE = 'Resources';
 const useStyles = () => ({
@@ -44,10 +45,14 @@ export default function Resources() {
                 <Button color="vcColor" size="sm" className={classes.addNewButton}
                         style={{fontSize: 20, boxShadow:'none', marginLeft:'auto', marginRight:'auto', marginTop: 20, marginBottom: 20}}
                         active={true} target={'_blank'} rel="noopener noreferrer"
-                        href={'https://forms.gle/WWjyroMcnMsyp7Lv9'}> <AddIcon/> Add New Resource
+                        href={"resources-form"}> <AddIcon/> Add New Resource
                 </Button>
             </div>
-
+            <h3 style={{ textAlign: "center", fontSize: "15px" }}
+                className={classes.toAll}>
+                We have compiled the following resources to help during these tough times!<br/>
+                Resources are updated weekly.
+            </h3>
             <CategoriesSection />
 
         </Template>

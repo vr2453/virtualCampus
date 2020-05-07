@@ -5,7 +5,9 @@ const MentalHealthURL = CampusURL + 'mental-health/';
 const COVIDURL = CampusURL + 'covid/';
 const JobsInternshipsURL = CampusURL + 'jobs-internships/';
 const HousingURL = CampusURL + 'housing/';
-const InternationalStudentsURL = CampusURL + 'international-students/'
+const InternationalStudentsURL = CampusURL + 'international-students/';
+
+const NewResourceURL = CampusURL + 'add-resource/';
 
 const facebookGroupPic = 'https://engineering.fb.com/wp-content/uploads/2017/05/fb-hero-image-001.jpeg';
 const instagramGroupPic = 'https://colorlib.com/wp/wp-content/uploads/sites/2/instagram-image-size.jpg';
@@ -36,6 +38,7 @@ const IndexCampusData = {
   'housing': ['housing-covid-faq', 'housing-ra-numbers'],
   'covid': ['connecting-people/samaritan', 'connecting-people/hearts-over-heads', 'resource-list/gssc-covid-resources', 'information/cu-campus-covid-website'],
   'international-students': ['isso-covid-faq', 'isso-maintaining-status', 'register-travel-columbia'],
+  'jobs-internships':[]
 };
 
 const CampusData = {
@@ -170,6 +173,25 @@ const CampusData = {
       }
     }
   },
+  'add_resource': {
+    title: 'Add Resource',
+    imgURL: 'https://i.ytimg.com/vi/ZdkJJOWG05g/maxresdefault.jpg',
+    pageURL: NewResourceURL,
+    data: {
+      'housing-covid-faq': {
+        title: 'Columbia Housing COVID FAQ',
+        description: 'Columbia Housing\'s FAQ for COVID',
+        imgURL: covidInfoPic,
+        website: 'https://preparedness.columbia.edu/content/housing/checkout2020',
+      },
+      'housing-ra-numbers': {
+        title: 'RA on duty numbers',
+        description: 'Numbers for RA on Duty for all current dorms',
+        imgURL: housingPic,
+        website: 'https://housing.columbia.edu/housing-options/residences/ra-duty',
+      }
+    }
+  },
   'covid': {
     title: 'COVID',
     imgURL: 'https://health.columbia.edu/sites/default/files/styles/cu_crop/public/content/pics/Heros/medicalservices_hero2.jpg?itok=TqqcsJY3',
@@ -271,25 +293,13 @@ const CampusData = {
     title: 'Jobs and Internships',
     imgURL: 'https://www.mailman.columbia.edu/sites/default/files/styles/hero_1500x632/public/jpg/career-1500x632-4.jpg?itok=rCvHZwm5',
     pageURL: JobsInternshipsURL,
-    data: {
-      'jobs': {
-        title: 'Jobs',
-        imgURL: 'https://images.unsplash.com/photo-1459499362902-55a20553e082?ixlib=rb-1.2.1&auto=format&fit=crop&w=1498&q=80',
-        pageURL: JobsInternshipsURL + 'jobs',
-        data: {}
-      },
-      'internships': {
-        title: 'Internships',
-        imgURL: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-        pageURL: JobsInternshipsURL + 'internships',
-        data:{}
-      }
-    }
+    data: {}
   }
 };
+
+console.log("logged!");
 
 module.exports = {
   CampusData: CampusData,
   IndexCampusData: IndexCampusData
 };
-
